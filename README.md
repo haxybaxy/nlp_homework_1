@@ -36,6 +36,12 @@ Run the main script:
 python homework.py
 ```
 
+To run the tests:
+
+```bash
+python -m unittest test_shakespeare_generator.py -v
+```
+
 The script will:
 1. Load Shakespeare's texts from NLTK Gutenberg corpus
 2. Build n-gram models
