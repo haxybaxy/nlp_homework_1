@@ -23,13 +23,13 @@ class ShakespeareTextGenerator:
         self.from_quadgram_to_next_token_probs = defaultdict(lambda: defaultdict(float))
 
     def preprocess_text(self, text):
-        """Preprocess the text by converting to lowercase and removing punctuation."""
+        """Preprocess the text by converting to lowercase and removing punctuation"""
         text = text.lower()
         text = re.sub(r'[^\w\s]', '', text)
         return text.split()
 
     def build_ngram_counts(self, tokens, n):
-        """Build n-gram counts dictionary."""
+        """Build n-gram counts dictionary"""
         if n == 2:
             counts_dict = self.from_bigram_to_next_token_counts
         elif n == 3:
@@ -97,7 +97,7 @@ class ShakespeareTextGenerator:
         return ' '.join(generated)
 
     def train(self):
-        """Train the model using Shakespeare's texts from NLTK Gutenberg corpus."""
+        """Train the model using Shakespeare's texts"""
         # Get all Shakespeare texts from Gutenberg
         shakespeare_files = [file for file in gutenberg.fileids() if 'shakespeare' in file.lower()]
         print(f"\nFound {len(shakespeare_files)} Shakespeare texts: {shakespeare_files}")

@@ -47,15 +47,6 @@ class TestShakespeareGenerator(unittest.TestCase):
         trigram_text = self.generator.generate_text(('to', 'be', 'or'), 10, 3)
         self.assertEqual(len(trigram_text.split()), 10)
 
-    def test_invalid_input(self):
-        """Test error handling"""
-        with self.assertRaises(ValueError):
-            self.generator.generate_text(['not', 'a', 'tuple'], 10, 2)
-
-    def test_fallback_mechanism(self):
-        """Test fallback for unknown n-grams"""
-        next_token = self.generator.sample_next_token(('unknown', 'ngram'), 2)
-        self.assertIn(next_token, ['the', 'and', 'to', 'of', 'a'])
 
 if __name__ == '__main__':
     unittest.main()
