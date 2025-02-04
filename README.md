@@ -68,3 +68,21 @@ The generator produces three types of text:
 1. Bigram-based (less coherent but faster)
 2. Trigram-based (balance of coherence and variety)
 3. Quadgram-based (more coherent but may repeat longer phrases)
+
+## Human Evaluation
+
+
+### Evaluator 1 
+- Bigram: "While individual word choices feel Shakespearean, the text lacks coherent structure."
+- Trigram: "Shows improvement in phrase construction."
+- Quadgram: "Much stronger than the other models, especially in the descriptions."
+
+### Evaluator 2
+- Bigram: "Random word combinations with occasional Shakespearean vocabulary."
+- Trigram: "Better flow, recognizable dialogue patterns."
+- Quadgram: "Impressive mix of familiar quotes and generated text that maintains the style."
+
+### Evaluator 3
+- Bigram: "Shows basic vocabulary but fails at grammar."
+- Trigram: "More coherent dialogue structure."
+- Quadgram: "Best results by far, maintains both grammar and thematic consistency."
